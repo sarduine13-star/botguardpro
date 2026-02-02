@@ -4,6 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BotGuard Pro — Revenue Protection for Serious Operators</title>
+
   <style>
     :root {
       --bg-black: #000000;
@@ -16,559 +17,180 @@
       --border-dark: #1E1E1E;
     }
 
-    /* Global styles */
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
+      font-family: Inter, system-ui, sans-serif;
       background-color: var(--bg-black);
       color: var(--text-gray);
       line-height: 1.6;
     }
-    section {
-      padding: 96px 120px;
-    }
-    h1, h2, h3 {
-      margin-top: 0;
-      color: var(--text-white);
-    }
-    h1 {
-      font-size: 64px;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-    h2 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    h3 {
-      font-size: 32px;
-      margin-bottom: 16px;
-    }
-    p {
-      margin: 0 0 20px 0;
-    }
-    /* Buttons */
+
+    section { padding: 96px 120px; }
+    h1,h2,h3 { color: var(--text-white); margin-top: 0; }
+    h1 { font-size: 64px; }
+    h2 { font-size: 48px; }
+    p { margin-bottom: 20px; }
+
     .button-primary {
       display: inline-block;
       padding: 16px 32px;
-      background-color: var(--accent-green);
-      color: var(--bg-black);
+      background: var(--accent-green);
+      color: #000;
       text-decoration: none;
       font-weight: 600;
       border-radius: 6px;
-      transition: background-color 0.3s ease;
     }
-    .button-primary:hover {
-      background-color: #00e676;
-    }
+
     .button-secondary {
       display: inline-block;
       padding: 16px 32px;
-      color: var(--accent-green);
+      margin-left: 16px;
       border: 1px solid var(--accent-green);
+      color: var(--accent-green);
       text-decoration: none;
       border-radius: 6px;
-      margin-left: 16px;
     }
-    /* Hero section */
+
     .hero {
-      background: linear-gradient(var(--bg-black), var(--bg-carbon));
-      padding-top: 160px;
-      padding-bottom: 160px;
+      padding: 160px 120px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      background: linear-gradient(#000, #0A0A0A);
     }
-    .hero-content {
-      width: 50%;
-    }
-    .hero-image {
-      width: 40%;
-      background-color: var(--bg-carbon);
-      padding: 32px;
-      border-radius: 12px;
-    }
-    /* Value strip */
-    .value-strip {
-      background-color: var(--bg-carbon);
-      display: flex;
-      text-align: center;
-      justify-content: space-between;
-    }
-    .value-item {
-      flex: 1;
-      padding: 40px;
-    }
-    .value-item h4 {
-      color: var(--text-white);
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-    .value-item p {
-      color: var(--text-gray);
-      font-size: 16px;
-      margin: 0;
-    }
-    /* Problem section */
-    .problem {
-      background-color: #f7f7f7;
-      color: #000;
-    }
-    .problem h2 {
-      color: #000;
-    }
-    .problem p {
-      color: #333;
-    }
-    .problem-list {
-      list-style: none;
-      padding: 0;
-    }
-    .problem-list li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-    .problem-list li::before {
-      content: "⚠";
-      margin-right: 8px;
-      color: #FF6B6B;
-    }
-    /* Proof section */
-    .proof {
-      background-color: var(--bg-black);
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .proof-card {
-      width: calc(33.333% - 24px);
-      background-color: var(--bg-slate);
-      border: 1px solid var(--border-dark);
-      border-radius: 12px;
-      padding: 32px;
-      margin: 12px;
-      color: var(--text-gray);
-    }
-    .proof-card h4 {
-      color: var(--text-white);
-      margin-bottom: 8px;
-    }
-    /* ROI section */
-    .roi {
-      background: linear-gradient(var(--accent-blue), var(--bg-black));
-      display: flex;
-      color: var(--text-white);
-      align-items: center;
-    }
-    .roi-stats {
-      flex: 1;
-    }
-    .roi-stats span {
-      display: block;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 48px;
-      color: var(--accent-green);
-      margin-bottom: 8px;
-    }
-    .roi-description {
-      flex: 1;
-      padding-left: 32px;
-    }
-    /* Persona grid */
-    .persona-grid {
-      background-color: var(--bg-carbon);
-      display: flex;
-      flex-wrap: wrap;
-      color: var(--text-white);
-    }
-    .persona-card {
-      width: calc(25% - 24px);
-      background-color: var(--bg-slate);
-      margin: 12px;
-      border-top: 4px solid var(--accent-green);
-      padding: 24px;
-      border-radius: 12px;
-    }
-    .persona-card h4 {
-      color: var(--text-white);
-      margin-bottom: 8px;
-    }
-    /* Feature tabs */
-    .feature-tabs {
-      padding: 96px 0;
-      background-color: var(--bg-carbon);
-    }
-    .feature-tabs h2 {
-      margin-bottom: 32px;
-      text-align: center;
-    }
-    .feature-tabs .tabs {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 32px;
-    }
-    .tab {
-      cursor: pointer;
-      padding: 12px 24px;
-      margin: 0 8px;
-      color: var(--text-gray);
-      border-bottom: 4px solid transparent;
-    }
-    .tab.active {
-      color: var(--text-white);
-      border-color: var(--accent-green);
-    }
-    .tab-content {
-      display: none;
-      text-align: center;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    /* Pricing block */
+
+    .hero-content { width: 50%; }
+    .hero-image { width: 40%; background:#0A0A0A; padding:32px; border-radius:12px; }
+
     .pricing {
-      background-color: var(--bg-black);
-      color: var(--text-white);
-      display: flex;
-      padding: 96px 120px;
+      background:#000;
+      display:flex;
+      padding:96px 120px;
     }
-    .pricing-left {
-      flex: 1;
-      padding: 0 32px;
-    }
-    .pricing-right {
-      flex: 1;
-      padding: 0 32px;
-    }
-    .price {
-      font-size: 64px;
-      font-weight: bold;
-      margin-bottom: 16px;
-    }
-    .pricing-right ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .pricing-right ul li {
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-    }
-    .pricing-right ul li::before {
-      content: "✔";
-      margin-right: 8px;
-      color: var(--accent-green);
-    }
-    /* Activation flow */
-    .activation {
-      background-color: var(--bg-carbon);
-      color: var(--text-white);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 96px 120px;
-    }
-    .activation-step {
-      display: flex;
-      align-items: center;
-      width: 25%;
-    }
-    .activation-step .circle {
-      width: 48px;
-      height: 48px;
-      border: 2px solid var(--accent-green);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 12px;
-      color: var(--text-white);
-    }
-    /* Final call to action */
-    .final-cta {
-      background-color: var(--bg-black);
-      text-align: center;
-      padding: 96px 120px;
-    }
-    .final-cta h2 {
-      color: var(--text-white);
-      margin-bottom: 20px;
-    }
-    .final-cta p {
-      color: var(--text-gray);
-      margin-bottom: 40px;
-    }
-    /* Footer */
+
+    .price { font-size:64px; color:#fff; font-weight:700; }
+
     footer {
-      background-color: var(--bg-carbon);
-      color: var(--text-gray);
-      padding: 40px 120px;
-      display: flex;
-      flex-wrap: wrap;
+      background:#0A0A0A;
+      padding:40px 120px;
+      color:#888;
+      display:flex;
     }
-    footer .column {
-      flex: 1;
-      min-width: 200px;
-      margin-bottom: 24px;
+
+    footer a {
+      color:#888;
+      text-decoration:none;
     }
-    footer h4 {
-      color: var(--text-white);
-      margin-bottom: 8px;
-    }
-    footer ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    footer ul li {
-      margin-bottom: 4px;
-    }
-    footer ul li a {
-      color: var(--text-gray);
-      text-decoration: none;
-    }
-    footer ul li a:hover {
-      color: var(--accent-green);
-    }
+
+    footer a:hover { color:var(--accent-green); }
   </style>
 </head>
+
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>BotGuard Pro — Revenue Protection for Serious Operators</h1>
-      <p>Stop bots from stealing your revenue. See the abuse hitting your site in 10 minutes. Recover $20k–$200k/mo in wasted spend.</p>
-      <a href="#start" class="button-primary">Start Detection Free</a>
-      <a href="#learn-more" class="button-secondary">Talk to an Operator</a>
-    </div>
-    <div class="hero-image">
-      <!-- Placeholder for dashboard preview -->
-      <p style="color: var(--text-white); margin: 0;">[Dashboard preview]</p>
-    </div>
-  </section>
 
-  <!-- Value Proposition Strip -->
-  <section class="value-strip">
-    <div class="value-item">
-      <h4>See abuse in 10 minutes</h4>
-      <p>Instant detection of bots and anomalies.</p>
-    </div>
-    <div class="value-item">
-      <h4>Recover $20k–$200k/mo</h4>
-      <p>Stop wasting your ad budget and get real ROI.</p>
-    </div>
-    <div class="value-item">
-      <h4>No CAPTCHA. No friction.</h4>
-      <p>Maintain user experience with zero barriers.</p>
-    </div>
-    <div class="value-item">
-      <h4>Operator‑controlled</h4>
-      <p>You decide what to block based on evidence.</p>
-    </div>
-  </section>
+<section class="hero">
+  <div class="hero-content">
+    <h1>BotGuard Pro — Revenue Protection for Serious Operators</h1>
+    <p>Stop bots from stealing your revenue. See abuse in minutes. Recover $20k–$200k/month.</p>
 
-  <!-- Problem Section -->
-  <section class="problem">
-    <h2>Bots aren’t a security issue — they’re a revenue leak</h2>
-    <p>Draining ad budgets, inflating CAC, polluting analytics, generating fake leads, and clogging support.</p>
-    <ul class="problem-list">
-      <li>Wasted ad spend</li>
-      <li>Fake leads</li>
-      <li>Polluted analytics</li>
-      <li>Support overload</li>
-      <li>Scrapers & credential stuffers</li>
-      <li>Fraud & revenue leakage</li>
-    </ul>
-  </section>
+    <a
+      href="https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09"
+      class="button-primary"
+      target="_blank"
+      rel="noopener"
+    >
+      Start Detection
+    </a>
 
-  <!-- Proof Section -->
-  <section class="proof">
-    <div class="proof-card">
-      <h4>Live Bot Logs</h4>
-      <p>Every hit, every pattern, every signature — in real time.</p>
-    </div>
-    <div class="proof-card">
-      <h4>Traffic Integrity Score</h4>
-      <p>Instant read on how much of your traffic is real vs. garbage.</p>
-    </div>
-    <div class="proof-card">
-      <h4>Anomaly Detection</h4>
-      <p>Spikes, clusters, coordinated attacks — surfaced automatically.</p>
-    </div>
-    <div class="proof-card">
-      <h4>Attribution Mapping</h4>
-      <p>See which campaigns, channels, and geos are wasting your money.</p>
-    </div>
-    <div class="proof-card">
-      <h4>Operator‑Grade Evidence</h4>
-      <p>Screenshots, payloads, fingerprints, timestamps — everything you need to act.</p>
-    </div>
-    <div class="proof-card">
-      <h4>Detection-first Platform</h4>
-      <p>Proof‑driven insights before any blocking occurs.</p>
-    </div>
-  </section>
+    <a
+      href="https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09"
+      class="button-secondary"
+      target="_blank"
+      rel="noopener"
+    >
+      View Pricing
+    </a>
+  </div>
 
-  <!-- ROI Section -->
-  <section class="roi">
-    <div class="roi-stats">
-      <span>$20k–$200k/mo</span>
-      <span>30–70% less fake leads</span>
-      <span>15–40% cleaner analytics</span>
-      <span>20–50% fewer tickets</span>
-    </div>
-    <div class="roi-description">
-      <h2>Recover revenue fast</h2>
-      <p>If you spend money to acquire traffic, BotGuard Pro pays for itself in days. We show you the abuse before you decide what to block.</p>
-    </div>
-  </section>
+  <div class="hero-image">
+    <p style="color:#fff">[Dashboard preview]</p>
+  </div>
+</section>
 
-  <!-- Persona Grid -->
-  <section class="persona-grid">
-    <div class="persona-card">
-      <h4>High‑Spend Advertisers</h4>
-      <p>Bots are eating your budget. Protect your campaigns and recover wasted spend.</p>
-    </div>
-    <div class="persona-card">
-      <h4>SaaS & Subscription</h4>
-      <p>Fake signups, polluted trials, inflated CAC — all fixed at the root.</p>
-    </div>
-    <div class="persona-card">
-      <h4>Agencies</h4>
-      <p>One dashboard. Zero guesswork. Real proof for every client.</p>
-    </div>
-    <div class="persona-card">
-      <h4>Marketplaces & Platforms</h4>
-      <p>Scrapers, credential stuffers, fake accounts — all exposed instantly.</p>
-    </div>
-  </section>
+<section class="pricing">
+  <div>
+    <h2>$5,000 / month</h2>
+    <div class="price">$5,000</div>
+    <p>Detection-first monitoring. Evidence before enforcement.</p>
 
-  <!-- Feature Tabs -->
-  <section class="feature-tabs" id="features">
-    <h2>Deep Dive</h2>
-    <div class="tabs">
-      <div class="tab active" data-target="tab1">Detection</div>
-      <div class="tab" data-target="tab2">Evidence</div>
-      <div class="tab" data-target="tab3">Attribution</div>
-      <div class="tab" data-target="tab4">Rules</div>
-      <div class="tab" data-target="tab5">Reports</div>
-    </div>
-    <div class="tab-content active" id="tab1">
-      <h3>Detection</h3>
-      <p>Identify every bot pattern and anomaly in real time with minimal latency.</p>
-    </div>
-    <div class="tab-content" id="tab2">
-      <h3>Evidence</h3>
-      <p>Access detailed evidence including payloads, fingerprints, timestamps, and screenshots.</p>
-    </div>
-    <div class="tab-content" id="tab3">
-      <h3>Attribution</h3>
-      <p>Map abuse back to campaigns, channels, and geos so you can optimize spend.</p>
-    </div>
-    <div class="tab-content" id="tab4">
-      <h3>Rules</h3>
-      <p>Create custom detection rules that adapt to your unique traffic patterns.</p>
-    </div>
-    <div class="tab-content" id="tab5">
-      <h3>Reports</h3>
-      <p>Receive weekly integrity reports with insights, trends, and recommendations.</p>
-    </div>
-  </section>
+    <a
+      href="https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09"
+      class="button-primary"
+      target="_blank"
+      rel="noopener"
+    >
+      Subscribe $5,000 / month
+    </a>
+  </div>
+</section>
 
-  <!-- Pricing Section -->
-  <section class="pricing" id="pricing">
-    <div class="pricing-left">
-      <h2>The $5k/mo Revenue Protection Tier</h2>
-      <div class="price">$5,000/mo</div>
-      <p>Guaranteed ROI or we fix it until it is.</p>
-      <a href="#start" class="button-primary">Start Detection Free</a>
-    </div>
-    <div class="pricing-right">
-      <ul>
-        <li>Full detection suite</li>
-        <li>Unlimited domains &amp; traffic</li>
-        <li>Dedicated operator support</li>
-        <li>Weekly integrity reports</li>
-        <li>Custom detection rules</li>
-        <li>Enterprise‑grade telemetry</li>
-        <li>Guaranteed ROI</li>
-      </ul>
-    </div>
-  </section>
+<section style="text-align:center">
+  <h2>Stop Guessing. Start Recovering.</h2>
 
-  <!-- Activation Flow -->
-  <section class="activation">
-    <div class="activation-step">
-      <div class="circle">1</div>
-      <p>Add one script</p>
-    </div>
-    <div class="activation-step">
-      <div class="circle">2</div>
-      <p>Watch bot traffic appear</p>
-    </div>
-    <div class="activation-step">
-      <div class="circle">3</div>
-      <p>See where your money is leaking</p>
-    </div>
-    <div class="activation-step">
-      <div class="circle">4</div>
-      <p>Decide what to block</p>
-    </div>
-  </section>
+  <a
+    href="https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09"
+    class="button-primary"
+    target="_blank"
+    rel="noopener"
+  >
+    Start Detection
+  </a>
+</section>
 
-  <!-- Final Call to Action -->
-  <section class="final-cta" id="final">
-    <h2>Stop Guessing. Start Recovering.</h2>
-    <p>See the abuse hitting your site in 10 minutes and decide if the $5k/mo tier is right for you.</p>
-    <a href="#start" class="button-primary">Start Detection Free</a>
-  </section>
+<footer>
+  <div>
+    <p>© BotGuard Pro</p>
+    <a
+      href="https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09"
+      target="_blank"
+      rel="noopener"
+    >
+      Start Detection
+    </a>
+  </div>
+</footer>
 
-  <!-- Footer -->
-  <footer>
-    <div class="column">
-      <h4>Product</h4>
-      <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#final">Start Free</a></li>
-      </ul>
-    </div>
-    <div class="column">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
-    </div>
-    <div class="column">
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Privacy</a></li>
-      </ul>
-    </div>
-    <div class="column">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="mailto:support@botguardpro.com">Contact Support</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <!-- JS for tab switching -->
-  <script>
-    const tabs = document.querySelectorAll('.tab');
-    const contents = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        contents.forEach(c => c.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById(tab.dataset.target).classList.add('active');
-      });
-    });
-  </script>
+<script>
+(function () {
+  const STRIPE_URL = "https://buy.stripe.com/28E9ATeZU31efkI5mDcFK09";
+  document.addEventListener("click", function (e) {
+    const el = e.target.closest("a, button");
+    if (!el) return;
+    const text = (el.innerText || "").toLowerCase();
+    if (text.includes("start") || text.includes("request") || el.classList.contains("button-primary") || el.classList.contains("cta")) {
+      e.preventDefault();
+      window.open(STRIPE_URL, "_blank", "noopener");
+    }
+  });
+})();
+</script><script>
+(function () {
+  const STRIPE_URL = "https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09";
+  document.addEventListener("click", function (e) {
+    const el = e.target.closest("a, button");
+    if (!el) return;
+    const text = (el.innerText || "").toLowerCase();
+    if (
+      text.includes("start") ||
+      text.includes("request") ||
+      text.includes("subscribe") ||
+      el.classList.contains("button-primary") ||
+      el.classList.contains("cta")
+    ) {
+      e.preventDefault();
+      window.open(STRIPE_URL, "_blank", "noopener");
+    }
+  });
+})();
+</script>
 </body>
 </html>
