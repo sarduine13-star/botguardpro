@@ -1,196 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
   <title>BotGuard Pro — Revenue Protection for Serious Operators</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BotGuard Pro exposes revenue loss from non-human traffic. Proof-first. Private access." />
 
   <style>
     :root {
       --bg-black: #000000;
-      --bg-carbon: #0A0A0A;
+      --bg-carbon: #0a0a0a;
       --bg-slate: #111111;
-      --accent-green: #00FF85;
-      --accent-blue: #3D7CFF;
-      --text-white: #FFFFFF;
-      --text-gray: #8A8A8A;
-      --border-dark: #1E1E1E;
+      --accent-green: #00ff85;
+      --text-white: #ffffff;
+      --text-gray: #8a8a8a;
+      --border-dark: #1e1e1e;
     }
+
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       font-family: Inter, system-ui, sans-serif;
-      background-color: var(--bg-black);
+      background: var(--bg-black);
       color: var(--text-gray);
       line-height: 1.6;
     }
 
-    section { padding: 96px 120px; }
-    h1,h2,h3 { color: var(--text-white); margin-top: 0; }
+    section {
+      padding: 96px 120px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      color: var(--text-white);
+      margin-top: 0;
+    }
+
     h1 { font-size: 64px; }
-    h2 { font-size: 48px; }
-    p { margin-bottom: 20px; }
+    h2 { font-size: 40px; }
+
+    p { max-width: 720px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: var(--bg-slate);
+      border: 1px solid var(--border-dark);
+      padding: 32px;
+    }
 
     .button-primary {
       display: inline-block;
-      padding: 16px 32px;
+      margin-top: 24px;
+      padding: 16px 36px;
       background: var(--accent-green);
       color: #000;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       border-radius: 6px;
     }
 
     .button-secondary {
       display: inline-block;
-      padding: 16px 32px;
-      margin-left: 16px;
-      border: 1px solid var(--accent-green);
-      color: var(--accent-green);
+      margin-top: 16px;
+      padding: 14px 32px;
+      border: 1px solid var(--border-dark);
+      color: var(--text-white);
       text-decoration: none;
-      border-radius: 6px;
     }
-
-    .hero {
-      padding: 160px 120px;
-      display: flex;
-      justify-content: space-between;
-      background: linear-gradient(#000, #0A0A0A);
-    }
-
-    .hero-content { width: 50%; }
-    .hero-image { width: 40%; background:#0A0A0A; padding:32px; border-radius:12px; }
-
-    .pricing {
-      background:#000;
-      display:flex;
-      padding:96px 120px;
-    }
-
-    .price { font-size:64px; color:#fff; font-weight:700; }
 
     footer {
-      background:#0A0A0A;
-      padding:40px 120px;
-      color:#888;
-      display:flex;
+      border-top: 1px solid var(--border-dark);
+      text-align: center;
+      padding: 48px;
+      font-size: 14px;
     }
-
-    footer a {
-      color:#888;
-      text-decoration:none;
-    }
-
-    footer a:hover { color:var(--accent-green); }
   </style>
 </head>
 
 <body>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>BotGuard Pro — Revenue Protection for Serious Operators</h1>
-    <p>Stop bots from stealing your revenue. See abuse in minutes. Recover $20k–$200k/month.</p>
+<section>
+  <h1>BotGuard Pro</h1>
+  <p>
+    Continuous revenue-loss visibility for real traffic.
+    No trials. Private access only.
+  </p>
+</section>
 
-    <a
-      href="https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09"
-      class="button-primary"
-      target="_blank"
-      rel="noopener"
-    >
-      Start Detection
-    </a>
+<section>
+  <div class="grid">
+    <div class="card">
+      <h2>$5,000 / month</h2>
+      <p>
+        Ongoing detection, classification, and financial signal integrity.
+      </p>
 
-    <a
-      href="https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09"
-      class="button-secondary"
-      target="_blank"
-      rel="noopener"
-    >
-      View Pricing
-    </a>
-  </div>
+      <ul>
+        <li>Continuous bot & abuse detection</li>
+        <li>Revenue-loss correlation</li>
+        <li>Priority investigation</li>
+        <li>Private reporting</li>
+      </ul>
 
-  <div class="hero-image">
-    <p style="color:#fff">[Dashboard preview]</p>
+      <!-- ✅ STRIPE PAYMENT LINK (FINAL) -->
+      <a href="https://buy.stripe.com/XXXX"
+         target="_blank"
+         class="button-primary">
+        Subscribe – $5,000 / month
+      </a>
+
+      <br>
+
+      <a href="#access" class="button-secondary">
+        Request Access
+      </a>
+    </div>
+
+    <div class="card">
+      <h2>What it fixes</h2>
+      <ul>
+        <li>Invalid paid traffic</li>
+        <li>Fake signups & funnel pollution</li>
+        <li>Scraping & automation abuse</li>
+        <li>False analytics & attribution</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section class="pricing">
-  <div>
-    <h2>$5,000 / month</h2>
-    <div class="price">$5,000</div>
-    <p>Detection-first monitoring. Evidence before enforcement.</p>
+<section>
+  <h2>Proof-First Model</h2>
+  <p>
+    BotGuard Pro operates against live traffic.
+    Logs, headers, and loss modeling are reviewed privately.
+  </p>
 
-    <a
-      href="https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09"
-      class="button-primary"
-      target="_blank"
-      rel="noopener"
-    >
-      Subscribe $5,000 / month
-    </a>
+  <div class="grid">
+    <div class="card">Live classification samples</div>
+    <div class="card">Revenue-loss correlation</div>
+    <div class="card">Fingerprint & header analysis</div>
   </div>
 </section>
 
-<section style="text-align:center">
-  <h2>Stop Guessing. Start Recovering.</h2>
+<section id="access">
+  <h2>Request Access</h2>
+  <p>Selective onboarding after review.</p>
 
-  <a
-    href="https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09"
-    class="button-primary"
-    target="_blank"
-    rel="noopener"
-  >
-    Start Detection
-  </a>
+  <form action="mailto:support@botguardpro.com" method="post" enctype="text/plain">
+    <input name="name" placeholder="Name" required /><br><br>
+    <input name="email" placeholder="Work Email" required /><br><br>
+    <input name="company" placeholder="Company" /><br><br>
+    <textarea name="problem" placeholder="Briefly describe your traffic problem"></textarea><br><br>
+    <button type="submit">Submit Request</button>
+  </form>
 </section>
 
 <footer>
-  <div>
-    <p>© BotGuard Pro</p>
-    <a
-      href="https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09"
-      target="_blank"
-      rel="noopener"
-    >
-      Start Detection
-    </a>
-  </div>
+  © 2026 BotGuard Pro. All rights reserved.
 </footer>
 
-<script>
-(function () {
-  const STRIPE_URL = "https://buy.stripe.com/28E9ATeZU31efkI5mDcFK09";
-  document.addEventListener("click", function (e) {
-    const el = e.target.closest("a, button");
-    if (!el) return;
-    const text = (el.innerText || "").toLowerCase();
-    if (text.includes("start") || text.includes("request") || el.classList.contains("button-primary") || el.classList.contains("cta")) {
-      e.preventDefault();
-      window.open(STRIPE_URL, "_blank", "noopener");
-    }
-  });
-})();
-</script><script>
-(function () {
-  const STRIPE_URL = "https://buy.stripe.com/28E9ATeZU31efkI5mDcfK09";
-  document.addEventListener("click", function (e) {
-    const el = e.target.closest("a, button");
-    if (!el) return;
-    const text = (el.innerText || "").toLowerCase();
-    if (
-      text.includes("start") ||
-      text.includes("request") ||
-      text.includes("subscribe") ||
-      el.classList.contains("button-primary") ||
-      el.classList.contains("cta")
-    ) {
-      e.preventDefault();
-      window.open(STRIPE_URL, "_blank", "noopener");
-    }
-  });
-})();
-</script>
 </body>
 </html>
